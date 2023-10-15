@@ -62,7 +62,7 @@ def output(request):
     template=loader.get_template('output.html')
     return HttpResponse(template.render())
 def result(request):
-    dataframe = pd.read_csv("C:/jangopro/pro1/app1/collegePlace.csv")
+    dataframe = pd.read_csv("C:/jango project/pro1/app1/collegePlace.csv")
     dataframe['Gender'].replace({'Male': 0,
                                  'Female': 1}, inplace=True)
     dataframe['Stream'].replace(
