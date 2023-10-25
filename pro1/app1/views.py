@@ -7,6 +7,8 @@ from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 from django.template import loader
 from . models import *
+from pro1.wsgi import some_function
+
 def index(request):
     template=loader.get_template('index.html')
     return HttpResponse(template.render())
